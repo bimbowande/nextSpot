@@ -1,0 +1,171 @@
+@import '../partials/mixins';
+@import '../partials/variables';
+@import '../partials/layouts';
+
+.staff-update-section{
+    width:90%;
+    height:100%;
+    position: relative;
+    margin:0 auto;
+    font-size:13px;
+    & .staff-info{
+        text-align:center;
+        margin-bottom:20px;
+    }
+}
+
+ .update-avatar{
+    margin-bottom:20px;
+    width:150px;
+    height:150px;
+    border-radius:150px;
+    margin:0 auto;
+    background-image: url(../../../icons/girl.png);
+    background-size:100%;
+    background-position:center;  
+    background-repeat: none !important;
+    background-color:white;
+
+    position:relative;
+    top:20px;
+    & .img-avatar{
+      max-width:100%;
+      border-radius:150px;
+      height:inherit;
+      width:100%;
+      max-height:100%;
+    }
+    & .upload-avatar{
+        position:absolute;
+        width:30px;
+        z-index:345676543;
+        top:75%;
+        opacity:0;
+        right:2px;
+        cursor:pointer;
+    }
+    & .icon-plus{
+        top:70%;
+        right:-8px;
+        background-color:#ccc;
+        font-size:14px;
+        border-radius:40px;
+        position:absolute;
+    }
+}
+
+.staff-update-profile-section{
+    display:flex;
+    flex-wrap:nowrap;
+    width:100%;
+   
+    & .staff-info-update{
+        width:40%;
+        height:auto !important;
+        padding:10px;
+        margin:5px;
+        margin-left:10px;
+        & .staff-content{
+            height:auto;
+            background:white;
+            padding:10px;
+        }
+        & h3{
+            margin-bottom: 10px;
+        }
+        & .staff-details,h3{
+            padding:10px;
+        }
+        & .staff-details{
+           display:flex;
+           border-bottom:1px solid #eef;
+           & h3{
+               font-weight: 600;
+               text-align: right;
+           }
+           &:last-child{
+               border:none;
+           }
+            & label{
+              flex:1;
+              position:relative;
+              top:8px;
+              text-align:left;
+            }
+            & input{
+                flex:1;
+                justify-content:flex-end;
+                padding:10px;
+                text-align:left;
+                border:none;
+                font-family:'Raleway';
+                font-weight:600;
+                background-color:transparent;
+            }
+        }
+        & .select-user-role{
+            & h4,select{
+                margin-left:10px;
+            }
+            & h4{
+               margin-bottom: 10px;
+               color:#149;
+            }
+            & select{
+                padding: 10px;
+                position: relative;
+                margin-top:10px;
+
+            }
+        }
+    }
+}
+
+//button
+.save-btn{
+    margin:0 auto;
+    margin-bottom: 10px;
+    text-align:center;
+    & button{
+        width:20%;
+        padding:15px;
+        color:white;
+        font-family:'Raleway';
+        cursor:pointer;
+        background-color:#121049;
+        border:none;
+        border-radius: 30px;
+        &:hover{
+            background-color:#120e6e;
+        }
+    }
+}
+.staff-info + .back{
+    display: inline-block;
+    position:absolute; 
+    top:-10px;
+    border-radius:40px;
+    padding:10px;
+    cursor: pointer;
+    &:hover{
+        color:navy;
+    }
+    & i{
+        position: relative;
+        top:0;
+    }
+}
+
+.staff-content{
+    position:relative;
+    & .error-msg{
+        position:absolute;
+        right:10px;
+        color: white;
+        width:40%;
+        padding:5px;
+        text-align:center;
+        line-height: 12px;
+        top:15px;
+    }
+}

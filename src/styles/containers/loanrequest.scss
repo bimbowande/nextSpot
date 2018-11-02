@@ -1,0 +1,16 @@
+@import '../partials/mixins';
+@import '../partials/variables';
+
+.request-container{
+    width:100%;
+    position:relative;
+}
+
+.loan-request-page{
+    font-family: 'Raleway';
+    width:90%;
+    font-size: 12px;
+    display: flex;
+    margin: 0 auto;
+    flex-flow: wrap;
+}

@@ -1,0 +1,45 @@
+@import '../partials/mixins';
+@import '../partials/variables';
+@import '../partials/layouts';
+
+.AdminHistory{
+    @include width($total);
+    @include height(auto);
+   box-sizing: border-box;
+   position:relative;
+   
+   & .back{
+       display:inline-block;
+       position:absolute;
+        box-sizing:border-box;
+        margin:0 auto;
+        top:-20px;
+        left:50px;
+       & .round-color{
+           cursor:pointer;
+           width:45px;
+           border-radius:100%;
+           box-shadow:1px 2px 1px rgba(134,134,134,.8);
+           height:45px;
+           display:inline-block;
+           background-color:#fff;
+           & i{
+               position:relative;
+               top:3px;
+               left:4px;
+           }
+       }
+       :hover{
+           background-color:rgba(234,234,234,.5);
+       }
+   }
+   & .text{
+       width:85%;
+       margin:0 auto;
+       text-align:center;
+       margin-bottom:20px;
+       & h3{
+           color:navy;
+       }
+   }
+}

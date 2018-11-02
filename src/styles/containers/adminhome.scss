@@ -1,0 +1,115 @@
+@import '../partials/mixins';
+@import '../partials/variables';
+@import '../partials/layouts';
+
+
+@for $i from 1 through 5{
+    .flex-#{$i}{
+        flex:$i;
+    }
+}
+
+.admin-home{
+    @include bgColor($curtain);
+    font-family:'Lato';
+    min-height: 100%;
+    @include display(flex);
+    flex-flow: column;
+    font-size: 13px;
+    
+   & .quick-stats,.analytics,.user-details{
+       
+   }
+}
+//quick stats section
+.quick-stats{
+    margin-top:10px; 
+    & .header-text,.card-list{
+        font-size: 13px;
+        margin:0 auto;
+    }
+    & .header-text{
+        padding: 10px;
+        display: inline-block;
+        margin-left:55px; 
+    }
+    & .card-list{
+        width:90%;
+        @include display(flex);
+    }
+}
+
+.card-list-item{
+    margin:10px;
+    background-color:white;
+    padding: 10px;
+    height:120px; 
+    box-shadow: 1px 2px 2px #ccc;
+}
+
+//analyitcs
+.analytics{
+    @include display(flex);
+    width:90%;
+    margin: 0 auto;
+    & .card-list-item{
+        height: 200px;
+    }
+    & .divisions{
+        & .card-item{
+            box-sizing: border-box;
+            border:1px groove rgba(204, 204, 204, 0.165);
+            width:50%;
+            height: 50%;
+            text-align: center;
+            padding:5px;
+            display: inline-block
+        }
+    }
+}
+.user-details{
+    @include display(flex);
+    width:90%;
+    margin: 0 auto;
+   
+    & .card-list-item{
+    }
+}
+.remove-right{
+    border-right: none !important;
+}
+.remove-left{
+    border-left: none !important;
+}
+.remove-top{
+    border-top: none !important;
+}
+.remove-bottom{
+    border-bottom:none !important;
+}
+
+//quick-stats
+.quick-stats{
+    & .card-list{
+        & .card-list-item{
+          & h2{
+              font-size:15px;
+              font-weight:100;
+               background-image: linear-gradient(12deg, rgba(15, 5, 150, 0.9), rgba(150, 55, 15, 0.5));
+                -webkit-background-clip: text;
+                -ms-background-clip: text;
+                -moz-background-clip: text;
+                -o-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              
+          }
+          & h3{
+              position:relative;
+              top:30px;
+              font-size:13px;
+              color:rgb(12,12,40);
+               font-weight:500;
+          }
+        }
+    }
+}

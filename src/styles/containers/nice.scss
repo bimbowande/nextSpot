@@ -1,0 +1,12 @@
+{/* <div  style = {style}className ='curtain'>
+          <h2>You have {BirdStore.birdCount} birds</h2>
+          <form style={form_style} onSubmit={e=>this.handleSubmit(e)}>
+            <input type='text' placeholder='Enter Bird' ref={ input=>this.bird = input}/>
+            <button>Add bird</button>
+          </form>
+          <ul>
+            {BirdStore.birds.map(bird =>
+              <li key = {bird}>{bird}</li>
+            )}
+          </ul>
+          </div> */}

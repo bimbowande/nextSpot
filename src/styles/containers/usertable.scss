@@ -1,0 +1,157 @@
+@import '../partials/mixins';
+@import '../partials/variables';
+@import '../partials/layouts';
+
+
+.userTable{
+    //background:white;
+    width:84%;
+    margin:0 auto;
+    height:100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+//filter
+.filter{
+    & .input-group{
+        display: inline-block;
+        font-weight: 700;
+        font-size: 14px;
+        margin: 10px 0;
+        position: relative;
+        & .inactive-label{
+            color:rgba(90,10,10,.9);
+        }
+        & input{ // take it out of document flow
+            padding:10px;
+            opacity: 0;
+            
+            & + label {
+                position: relative;
+                cursor: pointer;
+                padding: 0;
+              }
+            
+              // Box.
+              & + label:before {
+                content: '';
+                margin-right: 10px;
+                display: inline-block;
+                vertical-align: text-top;
+                width: 20px;
+                height: 20px;
+                background: white;
+              }
+            
+              // Box hover
+              &:hover + label:before {
+                background:#8787e4;
+              }
+              
+              // Box focus
+              &:focus + label:before {
+                box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+              }
+            
+              // Box checked
+              &:checked + label:before {
+                background:#8787e4;
+              }
+              
+              // Disabled state label.
+              &:disabled + label {
+                color: #b8b8b8;
+                cursor: auto;
+              }
+            
+              // Disabled box.
+              &:disabled + label:before {
+                box-shadow: none;
+                background: #ddd;
+              }
+            
+              // Checkmark. Could be replaced with an image
+             &:checked + label:after {
+                content: '';
+                position: absolute;
+                left: 5px;
+                top: 9px;
+                background: white;
+                width: 2px;
+                height: 2px;
+                box-shadow: 
+                  2px 0 0 white,
+                  4px 0 0 white,
+                  4px -2px 0 white,
+                  4px -4px 0 white,
+                  4px -6px 0 white,
+                  4px -8px 0 white;
+                transform: rotate(45deg);
+              }
+        }
+    }
+    .input-group:nth-child(even){
+        margin-left: 10px; 
+    }
+}
+
+//usertable
+.usertable{
+    width: 100%;
+    background-color:white; 
+    font-size: 12px;
+    padding:10px;
+    border-spacing: 0;
+    & tr{
+        cursor: pointer;
+        padding:10px;
+        box-sizing: padding-box;
+
+        & th{
+            padding: 20px;
+            text-align: left;
+            font-size: 13px;
+        }
+
+       & td{
+           margin: 0;
+            padding: 20px;
+            & img{
+                width:10%;
+                float:left;
+                padding-right: 5px;
+            }
+        }
+        &:hover{
+            font-weight: 700;
+            background-color: rgba(10,10,100,.2);
+        }
+        &:nth-child(even){
+            background-color: #eee; 
+            &:hover{
+                font-weight: 700;
+                background-color: rgba(10,10,100,.4);
+            }
+        }
+    }
+}
+
+.viewmore-click:hover{
+    color:green;
+}
+
+.viewmore-click{
+    & button{
+        background-color: #8787e4;
+        padding: 5px;
+        border-radius: 20px;
+        border: none;
+        color: white;
+        cursor:pointer;
+        font-family: 'Raleway';
+    }
+    & button:hover{
+        background-color: rgba(10,10,100,.6);
+    }
+}

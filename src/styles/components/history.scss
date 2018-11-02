@@ -1,0 +1,105 @@
+para{
+    max-width:100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    position:relative;
+    top:10px;
+}
+
+.history-section{
+    width:100%;
+    box-sizing: border-box;
+    & .history-content{
+        width:85%;
+        padding-bottom:0;
+        margin: 0 auto;
+        display: flex;
+
+        & .serial-num{
+            position:relative;
+            top:26px;
+        }
+        & .serial-num,.actions,.date{
+            margin-bottom:20px;
+        }
+
+        & .date,.actions{
+            height:70px;
+            margin-bottom:20px;
+            border-radius:10px;
+        }
+    }
+}
+
+.serial-num{
+    background-color: transparent !important;
+    width:4% !important;
+    & .circle{
+        width:20px;
+        position: relative;
+        height:20px;
+        border-radius:100%;
+        &:before{
+            content: "|";
+            position: absolute;
+            top:-79px;
+            left:3px;
+            color:rgba(10,10,10,.4);
+            font-family:'raleway';
+            font-size:70px;
+            font-style: normal;
+            font-weight: 100;
+            height:55px;
+        }
+    }
+}
+
+.date{
+  background:rgb(123,123,123);
+  margin-left:30px;
+  position:relative;
+  & p{
+      @extend para;
+      color:white;
+      padding:10px;
+      font-weight:600;
+      font-size:16px;
+      text-align:right;
+  }
+  &:before{
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900; 
+        font-size:30px;
+        left:-10px;
+        top:20px;
+        color:rgb(123,123,123);
+        position:absolute;
+        content: "\f0d9";
+    }
+}
+.actions{
+    height:auto;
+    margin-left:10px;
+    position:relative;
+   
+    & .contents{
+        max-height: 100%;
+        min-height:30%;
+        height:100%;
+        max-width:100%;
+        border-radius:10px;
+        display:inline-block;  
+        cursor:pointer;
+        & p{
+            @extend para;
+            padding:20px;
+            font-weight:400;
+            color:white;
+        } 
+       &:hover{
+           background-color:rgba(0,0,0,.6);
+       }
+    }
+  
+}

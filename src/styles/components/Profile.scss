@@ -1,0 +1,33 @@
+.profile-section{
+    margin: 0 auto;
+    width:85%;
+    margin-bottom:80px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  
+    & picture, .admin-name{
+        width:30%;
+      
+    }
+    & picture{
+        margin: 0;
+        padding: 0;
+        text-align:right;
+        
+        & img{
+            width:120px;
+            height:120px;
+            background-color: #ccc;
+            border-radius:100%;
+        }
+    }
+
+    & .admin-name{
+        padding: 20px;
+        & h3,p{
+            margin-bottom: 5px;
+        }
+    }
+}

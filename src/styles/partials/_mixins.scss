@@ -1,0 +1,29 @@
+
+//for flex
+@mixin display($display){
+    display:$display;
+}
+
+//for height
+@mixin height($height){
+    height:$height
+}
+
+//for bgcolor
+@mixin bgColor($bgcolor) {
+    background-color: $bgcolor;
+}
+
+//for width
+@mixin width($width){
+    width:$width
+}
+
+//font-weight
+@mixin fontW($fw){
+    font-weight:$fw;
+}
+//color
+@mixin  color($color) {
+    color: $color;
+}

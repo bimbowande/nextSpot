@@ -1,0 +1,108 @@
+@import '../partials/mixins';
+@import '../partials/variables';
+
+.create-account{
+    width:100%;
+    font-family: 'Raleway';
+    //height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin-bottom: 20px;
+   @include bgColor($curtain);
+
+    & .form-section{
+        width:60%;
+        box-shadow: 1px 2px 2px #ccc;
+        padding:30px;
+        height:88%;
+        min-height: 80%;
+        margin: 0 auto;
+        position:relative;
+        @include bgColor(white);
+
+        & .form-input,.brand-name,.image,.tag-text,.form-input{
+            width:60%;
+            margin: 0 auto;
+            margin-bottom:10px;
+        }
+        & .form-input{
+            margin-top: 30px;
+        }
+    }
+}
+
+.form-input{
+   
+    & .input-group{
+         margin-bottom: 10px;
+        & .input-box{
+            font-family: 'Raleway';
+            width:100%;
+            height: 30px;
+            padding:5px;
+            margin: 0;
+            border:none;
+            border-bottom: 1px solid $curtain;
+        }
+    }
+    & .create-account-btn{
+        margin-top: 30px; 
+        font-family: 'Raleway';
+        background-color: #0a0a14;
+        width:50%;
+        padding: .8em .8em;
+        border: 1px solid #446d88;
+        border-radius: .2em;
+        box-shadow: 0 .05em .25em gray;
+        color: white;
+        text-shadow: 0 -.05em .05em #335166;
+        line-height: 1.5;
+        cursor:pointer;
+        &:hover{
+             background-color: #0a0a55;
+        }
+    }
+}
+
+.remember-me{
+    margin-top: 20px; 
+    margin-bottom:10px;
+}
+.registered{
+    @include fontW(400);
+    font-size:14px;
+}
+.registered,.login-link{
+    margin-bottom: 10px;
+    color:#0a0a14
+}
+.login-link{
+   @include fontW(900);
+   font-size: 18px;
+   cursor: pointer;
+   margin-top:20px;
+   display:inline-block;
+   padding-bottom:5px;
+}
+
+.height-fix{
+    padding: 20px;
+    height:auto !important ;
+    min-height: auto !important;
+}
+
+
+.input-group{
+    & select{
+        margin-left:15px;
+        padding: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        font-family: 'Raleway';
+        color:#112355;
+        & option{
+            cursor: pointer;
+        }
+    }
+}

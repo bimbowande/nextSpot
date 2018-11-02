@@ -1,0 +1,175 @@
+@import '../partials/variables';
+@import '../partials/mixins';
+@import '../partials/layouts';
+
+
+.btn-section{
+    & .create-account-btn{
+        font-family: 'Raleway';
+        border:none;
+        padding: 10px;
+        border-radius:20px; 
+        @include fontW(590);
+        line-height: 1.5;
+        background-color: #8787e4;
+        color:white;
+        cursor:pointer;
+        &:hover{
+             background-color: #8787c1;
+             color:white;
+        }
+        & .icon{
+            position: relative;
+            padding: 2px;
+            margin-left:3px; 
+            top:0px;
+            font-size: 12px;
+        }
+    }
+}
+
+
+.container-child{
+    font-family: 'Raleway';
+    width:85%;
+    margin:0 auto;
+    margin-top:20px;
+    margin-bottom:20px;
+    & .btn-section{
+        margin-bottom: 30px;
+    }
+    & .corporate-header{
+        font-size:13px;
+    }
+}
+
+//information row
+.corporate-table{
+    border-spacing: 0;
+    margin-top:20px;
+    width: 100%;
+}
+.row{
+    padding-bottom: 30px;
+   font-size: 12px;
+   background-color:white;
+}
+
+
+.row{
+   & td{
+       text-align: left;
+       padding: 15px;
+       border:none;
+       &:nth-child(1){
+        color: #000;
+        @include fontW(900);
+        margin-bottom:20px;
+     }  
+   }
+}
+
+
+.row-head{
+    @include fontW(600);
+    font-size:13px;
+    & th{
+        padding: 15px;
+        text-align: left;
+    }
+}
+
+
+.row-body:nth-child(even){
+    background-color:rgba(253, 253, 253, 0.556);
+}
+
+
+.row-body{
+    color:#666;
+    &:hover{
+        background-color:rgba(24, 137, 230, 0.156);
+        color: #0a0a33;
+        transition: 5ms ease-in-out;
+        cursor:pointer;
+        padding:20px;
+    }
+}
+
+.row{
+   & button{
+        font-family: 'Raleway';
+        background-color: #8787e4;;
+        width:65px;
+        border-radius: 20px;
+        display: inline-block;
+        @include fontW(500);
+        padding:3px;
+        margin: 2px;
+        border:none;
+        font-size:11px;
+        box-shadow: 0 .05em .25em gray;
+        color: white;
+        line-height: 1.5;
+        cursor:pointer;
+        &:nth-child(even){
+            background-color: #eb660e;
+          
+            &:hover{
+                background-color: #e08419;
+           }
+        }
+        &:hover{
+             background-color: #01010c;
+        }
+        & .icon{
+           margin-left: 10px;
+        }
+    }
+}
+
+
+
+.staff-accounts{
+    width:90%;
+}
+
+.options{
+   
+}
+
+.remove-color{
+    & td{
+        text-align: right;
+        padding: 15px;
+        border:none;
+        @include fontW(800);
+        & a:hover{
+            text-decoration: underline;
+            cursor: pointer;
+            @include fontW(900);
+           
+        }
+    }
+}
+
+
+.staff-accounts{
+    & table,.employee,.btn-section{
+        border: none;
+        border-spacing: 0;
+    }
+    & .employee,.btn-section{
+        width:80%;
+        margin-bottom: 20px;
+    }
+}
+
+
+.text-align{
+    text-align: center;
+}
+
+.last-td{
+   & button{ padding:4px;background-color:rgba(100,10,10,.8); }
+}

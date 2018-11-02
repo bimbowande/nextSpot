@@ -1,0 +1,47 @@
+@import '../partials/mixins';
+@import '../partials/variables';
+@import '../partials/layouts';
+
+.userdata{
+    width: 100%;
+    height:auto;
+    min-height: 100%;
+    margin: 0 auto;
+    background-color:rgba(255,255,255,.95);
+    position: absolute;
+    box-sizing:padding-box !important;
+    top:-18px;
+}
+
+.userdata-content{
+    background-color: white;
+    padding:10px;
+    height: inherit;
+    min-height:100%;
+    box-shadow: 1px 2px 3px rgba(234,234,234,.8);
+    width:50%;
+    font-size: 12px;
+    margin: 0 auto;
+    position: relative;
+    top:30px;
+    & h2{
+        padding: 10px;
+        margin-top: 20px;
+    }
+    & .userdata-content-section{
+        & span{
+            position:absolute;
+            right: -10px;
+            top:-20px;
+            cursor:pointer;
+            transition:all .3s linear .4s;
+            &:hover{
+                transform:rotate(50deg);
+            }
+            & i{
+                font-size: 40px;
+                color:rgb(4, 5, 39);
+            }
+        }
+    }
+}

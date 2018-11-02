@@ -1,0 +1,131 @@
+.admin-profile{
+    width:90%;
+    margin:0 auto;
+    position: relative;
+    padding: 20px 0;
+    box-shadow: 1px 0 2px rgba(234,234,234,.8);
+}
+
+.admin-info-update{
+    display:flex;
+    & .white,.admin-data{
+        padding:10px;
+        background-color:white;
+
+    }
+    & .admin-data{
+        position:relative;
+        & .notify{
+            position:absolute;
+            color:white;
+            right:10px;
+            top:15px;
+            font-size:12px;
+            padding:5px;
+        }
+    }
+    & .admin-content{
+        flex:1;
+        margin:5px;
+        position: relative;
+        
+        & .details-msg{
+            position: absolute;
+            top:10px;
+            width:30%;
+            right:10px;
+            padding: 10px;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            & div{
+                position: relative;
+                top:-30px;
+                display: inline-block;
+                font-size:20px;
+                right:-50px;
+            }
+        } 
+        & input{
+            position:relative;
+            left:20px;
+        }
+        & .button-upload{
+            margin-top:20px;
+            & button{
+                padding:10px;
+                cursor: pointer;
+                width:150px;
+                font-family:'raleway';
+                border:none;
+                box-shadow: 2px 3px 3px rgba(12,14,120,.8);
+                color:white;
+                background-color:#127;
+                &:hover{
+                    background-color:rgb(14, 26, 65);
+                }
+                &.change-passkey{
+                    box-shadow:2px 3px 3px rgb(141, 98, 55) !important;
+                    background-color:rgb(187, 109, 31) !important;
+                    &:hover{
+                        background-color:rgb(95, 55, 6) !important;
+                    }
+                }
+            }
+        }
+       & .staff-details,h3,.button-upload{
+           padding:5px;
+           width:70%;
+           margin:0 auto;
+       }
+       & .h3-header{
+            margin-bottom:10px;
+            font-weight: 600;           
+        }
+
+       & .staff-details{
+           display: flex;
+           justify-content:space-between;
+           & h3{
+               font-size: 14px;
+               text-align:center;
+                position:relative;
+                left:46px;
+           }
+           & label{
+           
+            position:relative;
+            top:10px;
+            font-size: 13px;
+
+           }
+           
+           & input{
+               
+                padding:10px;
+                font-family:'Raleway';
+                background:transparent;
+                border:none;
+                box-sizing:border-box;
+                &:focus{
+                    color:black;
+                    box-sizing:border-box;
+                    border-bottom:1px solid #129;
+                }
+           }
+       }
+     }
+
+     & ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: rgba(0,0,0,.8);
+        font-weight: 600;
+        font-size:13px;
+      }
+}
+
+@media screen and (max-width:1000px){
+    .admin-info-update{
+        flex-direction:column;
+       
+    }
+}

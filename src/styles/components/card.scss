@@ -1,0 +1,25 @@
+.user-info{
+    display: flex;
+    width:70%;
+    padding: 10px;
+    &:last-child{
+        border-bottom:1px solid #ccc;
+        padding-bottom:20px;
+    }
+  
+    & h3{
+        flex:1;
+        font-weight: 400;
+    }
+    & p{
+        flex:1;
+        justify-content: flex-end;
+        margin: 0 auto;
+        font-weight: 600;
+    }
+}
+.last{
+    & .user-info:last-child{
+        border:none !important;
+    }
+}
